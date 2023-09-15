@@ -93,7 +93,7 @@ const forgotPasswordHandler = asyncHandler(async (req, res) => {
     from: `${process.env.EMAIL}`,
     to: user.email,
     subject: "Password Reset",
-    text: `To reset your password, click on this link: http://localhost:8080/api/users/reset/${resetToken}`,
+    text: `To reset your password, click on this link: https://auth-kpe6.onrender.com/api/users/reset/${resetToken}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
